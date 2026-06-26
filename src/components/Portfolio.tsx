@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import arushiImage from '../../pics/image0.jpeg';
 
 export const Portfolio = forwardRef<HTMLDivElement>((_, ref) => {
   return (
@@ -20,7 +21,7 @@ function HeroSection() {
     <section className="hero">
       <div className="hero-left">
         <div className="hero-deco">A</div>
-        <p className="hero-eyebrow">Portfolio · 2026</p>
+        
         <h1 className="hero-name">Arushi<br /><em>Maisuria</em></h1>
         <p className="hero-tagline">Marketing & Communications · Digital Strategy · Data Analytics · Broadcast Journalism</p>
         <div className="hero-contacts">
@@ -32,13 +33,9 @@ function HeroSection() {
       <div className="hero-right">
         <div className="polaroid">
           <div className="polaroid-img">
-            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-              <circle cx="25" cy="18" r="10" stroke="oklch(40% 0.015 50)" strokeWidth="1.5" />
-              <path d="M5 46c0-11 8.9-20 20-20s20 8.9 20 20" stroke="oklch(40% 0.015 50)" strokeWidth="1.5" />
-            </svg>
-            <p>profile photo</p>
+            <img src={arushiImage} alt="Arushi Maisuria" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
           </div>
-          <p className="polaroid-cap">Arushi, 2026</p>
+          <p className="polaroid-cap">State College, PA</p>
         </div>
         <p className="hero-summary">
           Aspiring media professional with experience in digital marketing, broadcast journalism, and data-driven storytelling. Passionate about blending creative strategy with analytics.

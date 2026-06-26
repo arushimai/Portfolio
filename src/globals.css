@@ -243,9 +243,7 @@ body.scrollable { overflow: auto; }
 .hero-right { background:var(--bg);padding:80px 60px 80px 70px;display:flex;flex-direction:column;justify-content:center;gap:36px; }
 .polaroid { width:250px;height:300px;background:white;padding:12px 12px 44px;box-shadow:0 8px 40px oklch(0% 0 0 / 0.12),0 2px 8px oklch(0% 0 0 / 0.06); opacity:0;transform:translateY(36px) rotate(3deg);transition:all 0.9s cubic-bezier(0.22,0.61,0.36,1) 0.35s; }
 .polaroid:hover { transform:rotate(0deg) scale(1.02)!important;box-shadow:0 16px 60px oklch(0% 0 0 / 0.16); }
-.polaroid-img { width:100%;height:210px;background:var(--peach);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px; }
-.polaroid-img svg { opacity:0.4; }
-.polaroid-img p { font-size:8px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);font-family:monospace; }
+.polaroid-img { width:100%;height:210px;overflow:hidden; }
 .polaroid-cap { font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--ink-mid);text-align:center;margin-top:10px; }
 .hero-summary { opacity:0;transform:translateY(20px);transition:all 0.7s ease 0.6s;border-left:3px solid var(--coral);padding-left:18px;font-size:13.5px;line-height:1.8;color:var(--ink-mid);font-weight:300;max-width:340px; }
 
@@ -316,10 +314,10 @@ section { padding:96px 0; }
 
 /* ─── ORGANIZATIONS ─── */
 #additional { background:linear-gradient(160deg,var(--blush) 0%,var(--bg) 60%); }
-.org-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:24px; }
-.org-card { background:white;padding:34px 30px;box-shadow:0 2px 16px oklch(0% 0 0 / 0.06);border-top:4px solid var(--coral-light);transition:all 0.3s; }
-.org-card:nth-child(2) { border-top-color:var(--sage-light);margin-top:20px; }
-.org-card:nth-child(3) { border-top-color:var(--peach);margin-top:40px; }
+.org-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch; }
+.org-card { background:white;padding:34px 30px;box-shadow:0 2px 16px oklch(0% 0 0 / 0.06);border-top:4px solid var(--coral-light);transition:all 0.3s;height:100%; }
+.org-card:nth-child(2) { border-top-color:var(--sage-light); }
+.org-card:nth-child(3) { border-top-color:var(--peach); }
 .org-card:hover { transform:translateY(-6px);box-shadow:0 12px 40px oklch(0% 0 0 / 0.12); }
 .org-name { font-size:15px;font-weight:600;margin-bottom:3px; }
 .org-role { font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--coral);margin-bottom:16px; }
