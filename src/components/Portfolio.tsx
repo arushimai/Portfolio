@@ -49,7 +49,11 @@ function HeroSection() {
 }
 
 function ExperienceSection() {
-  const jobs = [
+  const jobs: {
+    logo: string; company: string; meta: string; num: string; role: string;
+    bullets: string[]; delay: string;
+    clients?: { name: string; period: string; bullets: string[] }[];
+  }[] = [
     {
       logo: 'CA',
       company: 'CommAgency',
@@ -64,6 +68,28 @@ function ExperienceSection() {
         'Created integrated marketing campaigns across social media, email, web, and earned media',
         'Led client meetings and presented campaign insights, performance reports, and strategic recommendations',
         'Tracked campaign performance using GA4 and social analytics dashboards',
+      ],
+      clients: [
+        {
+          name: 'Orangetheory Fitness',
+          period: 'Aug – Dec 2025',
+          bullets: [
+            'Designed weekly social media content calendars',
+            'Monitored engagement metrics and optimized strategy using analytics',
+            'Sourced and secured local influencer partnerships; coordinated sponsorships and promotional events',
+            'Developed consumer email marketing campaigns; segmented subscriber lists to improve targeting',
+            'Tracked campaign performance using GA4 and social analytics dashboards',
+          ],
+        },
+        {
+          name: 'The Hershey Company',
+          period: 'March – May 2026',
+          bullets: [
+            'Created social media content concepts and promotional materials aligned with brand voice and marketing objectives',
+            'Assisted in developing campaign presentations by analyzing competitor activity, consumer insights, and digital marketing opportunities',
+            'Evaluated social media performance metrics and engagement trends to inform content strategy and improve audience reach',
+          ],
+        },
       ],
       delay: '0.05s',
     },
@@ -116,6 +142,24 @@ function ExperienceSection() {
                 <ul className="exp-bullets">
                   {job.bullets.map((b, i) => <li key={i}>{b}</li>)}
                 </ul>
+                {job.clients && (
+                  <div className="exp-clients">
+                    <p className="exp-clients-label">Client Work</p>
+                    <div className="exp-clients-grid">
+                      {job.clients.map(c => (
+                        <div className="exp-client-card" key={c.name}>
+                          <div className="exp-client-header">
+                            <span className="exp-client-name">{c.name}</span>
+                            <span className="exp-client-period">{c.period}</span>
+                          </div>
+                          <ul className="exp-bullets exp-client-bullets">
+                            {c.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
