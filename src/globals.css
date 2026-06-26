@@ -66,6 +66,7 @@ body.scrollable { overflow: auto; }
   filter: drop-shadow(0 30px 60px oklch(42% 0.06 35 / 0.35)) drop-shadow(0 0 50px oklch(62% 0.14 35 / 0.12));
   cursor: pointer;
   user-select: none;
+  will-change: transform;
 }
 @keyframes cam-float {
   0%,100% { transform: translateY(0px) rotate(-0.5deg); }
@@ -74,6 +75,7 @@ body.scrollable { overflow: auto; }
 }
 .cam-scene.clicked {
   animation: cam-zoom 1.8s cubic-bezier(0.25, 0, 0.6, 1) forwards;
+  filter: none;
 }
 @keyframes cam-zoom {
   0%   { transform: translateY(0px) rotate(0deg) scale(1);    opacity: 1; }
@@ -197,10 +199,15 @@ body.scrollable { overflow: auto; }
   border-radius: 4px;
   overflow: hidden;
   pointer-events: none;
+  will-change: left, top, width, height;
   transition: none;
 }
 #lcd-portal.rushing {
-  transition: all 1.5s cubic-bezier(0.4, 0, 0.85, 1);
+  transition: left 1.5s cubic-bezier(0.4, 0, 0.85, 1),
+              top 1.5s cubic-bezier(0.4, 0, 0.85, 1),
+              width 1.5s cubic-bezier(0.4, 0, 0.85, 1),
+              height 1.5s cubic-bezier(0.4, 0, 0.85, 1),
+              border-radius 1.5s cubic-bezier(0.4, 0, 0.85, 1);
 }
 
 /* ─── PORTFOLIO ─── */
