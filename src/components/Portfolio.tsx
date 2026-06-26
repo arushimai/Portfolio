@@ -220,7 +220,7 @@ function SkillsSection() {
               <p className="skill-group-title">{g.title}</p>
               <div className="skill-chips">
                 {g.chips.map(c => (
-                  <span key={c.label} className={`chip${c.hot ? ' hot' : ''}`}>{c.label}</span>
+                  <span key={c.label} className="chip">{c.label}</span>
                 ))}
               </div>
             </div>
