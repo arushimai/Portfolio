@@ -241,11 +241,11 @@ body.scrollable { overflow: auto; }
 .hero-contacts a:hover { color:white; }
 .cdot { width:5px;height:5px;border-radius:50%;background:oklch(100% 0 0 / 0.45);flex-shrink:0; }
 .hero-right { background:var(--bg);padding:80px 60px 80px 70px;display:flex;flex-direction:column;justify-content:center;gap:36px; }
-.polaroid { width:250px;height:300px;background:white;padding:12px 12px 44px;box-shadow:0 8px 40px oklch(0% 0 0 / 0.12),0 2px 8px oklch(0% 0 0 / 0.06); opacity:0;transform:translateY(36px) rotate(3deg);transition:all 0.9s cubic-bezier(0.22,0.61,0.36,1) 0.35s; }
+.polaroid { width:300px;height:358px;background:white;padding:14px 14px 46px;box-shadow:0 8px 40px oklch(0% 0 0 / 0.12),0 2px 8px oklch(0% 0 0 / 0.06); opacity:0;transform:translateY(36px) rotate(3deg);transition:all 0.9s cubic-bezier(0.22,0.61,0.36,1) 0.35s; }
 .polaroid:hover { transform:rotate(0deg) scale(1.02)!important;box-shadow:0 16px 60px oklch(0% 0 0 / 0.16); }
-.polaroid-img { width:100%;height:210px;overflow:hidden; }
+.polaroid-img { width:100%;height:266px;overflow:hidden; }
 .polaroid-cap { font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--ink-mid);text-align:center;margin-top:10px; }
-.hero-summary { opacity:0;transform:translateY(20px);transition:all 0.7s ease 0.6s;border-left:3px solid var(--coral);padding-left:18px;font-size:13.5px;line-height:1.8;color:var(--ink-mid);font-weight:300;max-width:340px; }
+.hero-summary { opacity:0;transform:translateY(20px);transition:all 0.7s ease 0.6s;border-left:3px solid var(--coral);padding-left:18px;font-size:13.5px;line-height:1.8;color:var(--ink-mid);font-weight:300;max-width:380px; }
 
 .pv .hero-eyebrow,.pv .hero-name,.pv .hero-tagline,.pv .hero-contacts,.pv .hero-summary { opacity:1;transform:translateY(0); }
 .pv .polaroid { opacity:1;transform:translateY(0) rotate(2.5deg); }
