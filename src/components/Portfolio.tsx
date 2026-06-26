@@ -345,7 +345,7 @@ function FooterSection() {
       <div className="footer-links">
         <a href="mailto:amaisuria03@gmail.com">Email</a>
         <a href="tel:7324847611">Call</a>
-        <a href="#">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/arushimaisuria/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </footer>
   );
