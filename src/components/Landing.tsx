@@ -169,7 +169,7 @@ export const Landing = forwardRef<LandingHandle, LandingProps>(({ onShoot }, ref
               <p>photo</p>
             </div>
             <p className="lv-name">Arushi<br />Maisuria</p>
-            <p className="lv-role">Marketing · Communications · Data</p>
+            <p className="lv-role">Marketing In Focus</p>
           </div>
 
           <div className="focus-bracket">
@@ -199,10 +199,6 @@ export const Landing = forwardRef<LandingHandle, LandingProps>(({ onShoot }, ref
           </div>
         </div>
       </div>
-
-      <p style={{ marginTop: '28px', fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'oklch(55% 0.06 35 / 0.65)', zIndex: 2, fontFamily: "'DM Sans', sans-serif" }}>
-        Click the shutter or screen to open
-      </p>
     </div>
   );
 });

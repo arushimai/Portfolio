@@ -22,12 +22,12 @@ function HeroSection() {
       <div className="hero-left">
         <div className="hero-deco">A</div>
         
-        <h1 className="hero-name">Arushi<br /><em>Maisuria</em></h1>
-        <p className="hero-tagline">Marketing & Communications · Digital Strategy · Data Analytics · Broadcast Journalism</p>
+        <h1 className="hero-name">Arushi<br/><em>Maisuria</em></h1>
+        <p className="hero-tagline">Marketing & Communications · Data Analytics · Broadcast Journalism</p>
         <div className="hero-contacts">
-          <a href="mailto:amaisuria03@gmail.com"><span className="cdot" />amaisuria03@gmail.com</a>
-          <a href="tel:7324847611"><span className="cdot" />732-484-7611</a>
-          <a href="#"><span className="cdot" />New Jersey</a>
+          <a href="mailto:amaisuria03@gmail.com"><ContactIcon type="email" />amaisuria03@gmail.com</a>
+          <a href="tel:7324847611"><ContactIcon type="phone" />732-484-7611</a>
+          <a href="#"><ContactIcon type="location" />New Jersey</a>
         </div>
       </div>
       <div className="hero-right">
@@ -42,6 +42,43 @@ function HeroSection() {
         </p>
       </div>
     </section>
+  );
+}
+
+function ContactIcon({ type }: { type: 'email' | 'phone' | 'location' }) {
+  const iconProps = {
+    className: 'contact-icon',
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 1.8,
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+    'aria-hidden': true,
+  };
+
+  if (type === 'email') {
+    return (
+      <svg {...iconProps}>
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m4 7 8 6 8-6" />
+      </svg>
+    );
+  }
+
+  if (type === 'phone') {
+    return (
+      <svg {...iconProps}>
+        <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6.5 6.5l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg {...iconProps}>
+      <path d="M20 10c0 5-8 12-8 12s-8-7-8-12a8 8 0 1 1 16 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
   );
 }
 
@@ -252,13 +289,12 @@ function EducationSection() {
               <p className="edu-school">The Pennsylvania<br />State University</p>
               <p className="edu-detail" style={{ marginTop: '10px' }}>
                 <strong>B.A. Advertising & Public Relations</strong><br />
-                Bellisario College of Communications
+                <span style={{ color: 'var(--ink-light)' }}>Bellisario College of Communications</span>
               </p>
               <p className="edu-detail" style={{ marginTop: '6px', fontSize: '12px' }}>
-                Minor: Digital Media Trends & Analytics<br />
+                <strong>Minor: Digital Media Trends & Analytics</strong><br />
                 <span style={{ color: 'var(--ink-light)' }}>College of Information Science & Technology</span>
               </p>
-              <span className="edu-badge">Expected May 2026</span>
             </div>
           </div>
           <div className="rr">
@@ -340,6 +376,7 @@ function FooterSection() {
     <footer>
       <p className="footer-brand">Arushi Maisuria</p>
       <div className="footer-links">
+        <a href="/amresume.pdf" download>Resume</a>
         <a href="mailto:amaisuria03@gmail.com">Email</a>
         <a href="tel:7324847611">Call</a>
         <a href="https://www.linkedin.com/in/arushimaisuria/" target="_blank" rel="noreferrer">LinkedIn</a>
