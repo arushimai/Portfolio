@@ -231,7 +231,7 @@ body.scrollable { overflow: auto; }
   background: repeating-linear-gradient(-55deg, transparent, transparent 40px, oklch(100% 0 0 / 0.025) 40px, oklch(100% 0 0 / 0.025) 41px);
   pointer-events: none;
 }
-.hero-deco { position:absolute;right:-20px;bottom:-60px; font-family:'Playfair Display',serif; font-size:300px; color:oklch(100% 0 0 / 0.05); font-weight:700; pointer-events:none; user-select:none; line-height:1; }
+.hero-deco { position:absolute;right:12px;bottom:-12px; font-family:'Playfair Display',serif; font-size:300px; color:oklch(100% 0 0 / 0.05); font-weight:700; pointer-events:none; user-select:none; line-height:1; }
 .hero-eyebrow { font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:oklch(100% 0 0 / 0.6);margin-bottom:18px; opacity:0;transform:translateY(16px);transition:all 0.6s ease 0.1s; }
 .hero-name { font-family:'Playfair Display',serif;font-size:clamp(50px,5.5vw,78px);line-height:1.02;color:white;font-weight:700;margin-bottom:16px; opacity:0;transform:translateY(28px);transition:all 0.8s ease 0.25s; }
 .hero-name em { font-style:italic;color:oklch(97% 0.02 80); }
