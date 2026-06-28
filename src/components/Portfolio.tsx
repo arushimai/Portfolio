@@ -83,12 +83,13 @@ function ContactIcon({ type }: { type: 'email' | 'phone' | 'location' }) {
 
 function ExperienceSection() {
   const jobs: {
-    logo: string; company: string; meta: string; num: string; role: string;
+    logoSrc: string; logoAlt: string; company: string; meta: string; num: string; role: string;
     bullets: string[]; delay: string;
     clients?: { name: string; period: string; bullets: string[] }[];
   }[] = [
     {
-      logo: 'CA',
+      logoSrc: '/logos/commagency.png',
+      logoAlt: 'CommAgency logo',
       company: 'CommAgency',
       meta: 'State College, PA\nAug 2025 – May 2026',
       num: '01',
@@ -127,7 +128,8 @@ function ExperienceSection() {
       delay: '0.05s',
     },
     {
-      logo: 'F',
+      logoSrc: '/logos/forbes-advisor.png',
+      logoAlt: 'Forbes Advisor logo',
       company: 'Forbes Advisor',
       meta: 'Jersey City, NJ\nJune – Aug 2024',
       num: '02',
@@ -142,7 +144,8 @@ function ExperienceSection() {
       delay: '0.15s',
     },
     {
-      logo: 'NL',
+      logoSrc: '/logos/penn-state.png',
+      logoAlt: 'Penn State logo',
       company: 'The News Lab',
       meta: 'State College, PA\nSept 2022 – May 2023',
       num: '03',
@@ -165,7 +168,9 @@ function ExperienceSection() {
           {jobs.map(job => (
             <div className="exp-item rv" key={job.num} style={{ transitionDelay: job.delay }}>
               <div className="exp-side">
-                <div className="exp-logo">{job.logo}</div>
+                <div className="exp-logo">
+                  <img src={job.logoSrc} alt={job.logoAlt} />
+                </div>
                 <p className="exp-company">{job.company}</p>
                 <p className="exp-meta" style={{ whiteSpace: 'pre-line' }}>{job.meta}</p>
                 <span className="exp-side-num">{job.num}</span>
