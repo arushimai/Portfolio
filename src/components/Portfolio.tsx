@@ -83,13 +83,14 @@ function ContactIcon({ type }: { type: 'email' | 'phone' | 'location' }) {
 
 function ExperienceSection() {
   const jobs: {
-    logoSrc: string; logoAlt: string; company: string; meta: string; num: string; role: string;
+    logoSrc: string; logoAlt: string; logoClassName?: string; company: string; meta: string; num: string; role: string;
     bullets: string[]; delay: string;
     clients?: { name: string; period: string; bullets: string[] }[];
   }[] = [
     {
-      logoSrc: '/logos/commagency.png',
+      logoSrc: '/logos/Comm agency.png',
       logoAlt: 'CommAgency logo',
+      logoClassName: 'exp-logo-img--commagency',
       company: 'CommAgency',
       meta: 'State College, PA\nAug 2025 – May 2026',
       num: '01',
@@ -169,7 +170,7 @@ function ExperienceSection() {
             <div className="exp-item rv" key={job.num} style={{ transitionDelay: job.delay }}>
               <div className="exp-side">
                 <div className="exp-logo">
-                  <img src={job.logoSrc} alt={job.logoAlt} />
+                  <img src={job.logoSrc} alt={job.logoAlt} className={job.logoClassName} />
                 </div>
                 <p className="exp-company">{job.company}</p>
                 <p className="exp-meta" style={{ whiteSpace: 'pre-line' }}>{job.meta}</p>
