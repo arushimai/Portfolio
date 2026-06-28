@@ -32,7 +32,7 @@ function HeroSection() {
       <div className="hero-right">
         <div className="polaroid">
           <div className="polaroid-img">
-            <img src="/arushi.jpg" alt="Arushi Maisuria" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
+            <img src="/image0.jpeg" alt="Arushi Maisuria" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
           </div>
           <p className="polaroid-cap">State College, PA</p>
         </div>
