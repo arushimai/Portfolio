@@ -1,5 +1,4 @@
 import { forwardRef } from 'react';
-import arushiImage from '../../pics/image0.jpeg';
 
 export const Portfolio = forwardRef<HTMLDivElement>((_, ref) => {
   return (
@@ -33,7 +32,7 @@ function HeroSection() {
       <div className="hero-right">
         <div className="polaroid">
           <div className="polaroid-img">
-            <img src={arushiImage} alt="Arushi Maisuria" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
+            <img src="/arushi.jpg" alt="Arushi Maisuria" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
           </div>
           <p className="polaroid-cap">State College, PA</p>
         </div>
@@ -376,7 +375,7 @@ function FooterSection() {
     <footer>
       <p className="footer-brand">Arushi Maisuria</p>
       <div className="footer-links">
-        <a href="/amresume.pdf" download>Resume</a>
+        <a href="/Arushi_Maisuria_Resume.pdf" download>Resume</a>
         <a href="mailto:amaisuria03@gmail.com">Email</a>
         <a href="tel:7324847611">Call</a>
         <a href="https://www.linkedin.com/in/arushimaisuria/" target="_blank" rel="noreferrer">LinkedIn</a>
