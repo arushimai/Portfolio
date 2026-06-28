@@ -282,29 +282,35 @@ function EducationSection() {
       <div className="container">
         <p className="section-label rv">Background</p>
         <h2 className="section-title rv">Education & Certifications</h2>
-        <div className="edu-layout">
-          <div className="rl">
-            <div className="edu-block">
-              <p className="edu-school">The Pennsylvania<br />State University</p>
-              <p className="edu-detail" style={{ marginTop: '10px' }}>
-                <strong>B.A. Advertising & Public Relations</strong><br />
-                <span style={{ color: 'var(--ink-light)' }}>Bellisario College of Communications</span>
-              </p>
-              <p className="edu-detail" style={{ marginTop: '6px', fontSize: '12px' }}>
-                <strong>Minor: Digital Media Trends & Analytics</strong><br />
-                <span style={{ color: 'var(--ink-light)' }}>College of Information Science & Technology</span>
-              </p>
+        <div className="edu-card rv">
+          <div className="edu-card-left">
+            <img src="/old-main.png" className="edu-watermark" alt="" />
+            <div className="edu-grad-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3.333 1.667 8.667 1.667 12 0v-5"/>
+              </svg>
             </div>
+            <p className="edu-school-name">The Pennsylvania<br />State University</p>
+            <p className="edu-degree">B.A. Advertising & Public Relations</p>
+            <p className="edu-college">Bellisario College of Communications</p>
+            <div className="edu-divider" />
+            <p className="edu-minor-label">Minor: Digital Media Trends & Analytics</p>
+            <p className="edu-college">College of Information Science & Technology</p>
           </div>
-          <div className="rr">
-            <div className="certs-col">
+          <div className="edu-card-right">
+            <p className="edu-cert-label">Certifications</p>
+            <div className="edu-cert-list">
               {certs.map(c => (
-                <div className="cert-row" key={c.name}>
-                  <div className="cert-icon">✓</div>
-                  <div>
-                    <p className="cert-name">{c.name}</p>
-                    <p className="cert-date">{c.date}</p>
+                <div className="edu-cert-row" key={c.name}>
+                  <div className="edu-cert-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="8" r="6"/>
+                      <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/>
+                    </svg>
                   </div>
+                  <span className="edu-cert-name">{c.name}</span>
+                  <span className="edu-cert-date">{c.date}</span>
                 </div>
               ))}
             </div>

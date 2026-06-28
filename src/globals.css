@@ -300,18 +300,23 @@ section { padding:96px 0; }
 
 /* ─── EDUCATION ─── */
 #education { background:var(--bg); }
-.edu-layout { display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:start; }
-.edu-block { background:linear-gradient(135deg,var(--sage-light),var(--bg2));padding:52px 48px 76px;position:relative;overflow:hidden;width:calc(100% + 36px); }
-.edu-block::before { content:'PSU';position:absolute;bottom:0;right:0px;font-family:'Playfair Display',serif;font-size:120px;font-weight:700;color:oklch(0% 0 0 / 0.035);line-height:1;z-index:0;pointer-events:none; }
-.edu-school { font-family:'Playfair Display',serif;font-size:24px;font-weight:600;margin-bottom:12px;position:relative;z-index:1; }
-.edu-detail { font-size:13px;color:var(--ink-mid);line-height:1.7;position:relative;z-index:1; }
-.edu-badge { display:inline-block;margin-top:18px;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;background:var(--sage);color:white;padding:6px 16px; }
-.certs-col { display:flex;flex-direction:column;gap:10px; }
-.cert-row { display:flex;align-items:center;gap:14px;padding:14px 18px;background:white;border:1px solid oklch(0% 0 0 / 0.07);transition:all 0.25s; }
-.cert-row:hover { border-color:var(--coral);transform:translateX(6px); }
-.cert-icon { width:32px;height:32px;background:var(--coral-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0; }
-.cert-name { font-size:13px;font-weight:500;margin-bottom:2px; }
-.cert-date { font-size:10px;color:var(--ink-light);letter-spacing:0.05em; }
+.edu-card { display:grid;grid-template-columns:2fr 3fr;box-shadow:0 4px 40px oklch(0% 0 0 / 0.08);overflow:hidden; }
+.edu-card-left { background:linear-gradient(135deg,var(--sage-light),var(--bg2));padding:52px 48px;position:relative;overflow:hidden; }
+.edu-watermark { position:absolute;right:-10px;bottom:0;height:88%;opacity:0.13;pointer-events:none;user-select:none;object-fit:contain;object-position:bottom right; }
+.edu-grad-icon { width:48px;height:48px;border-radius:50%;border:1.5px solid var(--coral);display:flex;align-items:center;justify-content:center;color:var(--coral);margin-bottom:28px;position:relative;z-index:1; }
+.edu-school-name { font-family:'Playfair Display',serif;font-size:clamp(22px,2.5vw,30px);font-weight:600;line-height:1.2;margin-bottom:16px;position:relative;z-index:1; }
+.edu-degree { font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);margin-bottom:4px;position:relative;z-index:1; }
+.edu-college { font-size:13px;color:var(--ink-mid);margin-bottom:0;position:relative;z-index:1; }
+.edu-divider { width:36px;height:2px;background:var(--coral);margin:18px 0;position:relative;z-index:1; }
+.edu-minor-label { font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;position:relative;z-index:1; }
+.edu-card-right { background:white;padding:48px 52px;border-left:1px solid oklch(0% 0 0 / 0.07); }
+.edu-cert-label { font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--coral);font-weight:600;margin-bottom:24px; }
+.edu-cert-list { display:flex;flex-direction:column; }
+.edu-cert-row { display:flex;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid oklch(0% 0 0 / 0.07); }
+.edu-cert-row:last-child { border-bottom:none; }
+.edu-cert-icon { width:34px;height:34px;border-radius:50%;border:1.5px solid var(--coral-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--coral); }
+.edu-cert-name { font-size:14px;font-weight:600;color:var(--ink);flex:1; }
+.edu-cert-date { font-size:12px;color:var(--ink-light);white-space:nowrap; }
 
 /* ─── ORGANIZATIONS ─── */
 #additional { background:linear-gradient(160deg,var(--blush) 0%,var(--bg) 60%); }
@@ -341,7 +346,9 @@ footer { background:var(--ink);color:oklch(70% 0.01 50);padding:52px 80px;displa
   .exp-item{grid-template-columns:1fr;}
   .exp-clients-grid{grid-template-columns:1fr;}
   .skills-cols{grid-template-columns:1fr;}
-  .edu-layout{grid-template-columns:1fr;gap:36px;}
+  .edu-card{grid-template-columns:1fr;}
+  .edu-card-right{border-left:none;border-top:1px solid oklch(0% 0 0 / 0.07);}
+  .edu-watermark{height:70%;}
   .org-grid{grid-template-columns:1fr;}
   .org-card:nth-child(2),.org-card:nth-child(3){margin-top:0;}
   .container{padding:0 28px;}
