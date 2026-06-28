@@ -269,12 +269,12 @@ function SkillsSection() {
 
 function EducationSection() {
   const certs = [
-    { name: 'Google Analytics', date: 'May 2026' },
-    { name: 'IBM Digital Marketing', date: 'June 2025' },
-    { name: 'Meta Social Media Trends', date: 'July 2025' },
-    { name: 'PWC Data Analytics', date: 'Aug 2025' },
-    { name: 'Hootsuite Digital Analytics', date: 'Dec 2025' },
-    { name: 'Stukent Digital Marketing', date: 'Dec 2025' },
+    { name: 'Google Analytics', date: 'May 2026', abbr: 'G', color: '#4285F4' },
+    { name: 'IBM Digital Marketing', date: 'June 2025', abbr: 'IBM', color: '#1261FE' },
+    { name: 'Meta Social Media Trends', date: 'July 2025', abbr: 'M', color: '#0082FB' },
+    { name: 'PWC Data Analytics', date: 'Aug 2025', abbr: 'PwC', color: '#D04A02' },
+    { name: 'Hootsuite Digital Analytics', date: 'Dec 2025', abbr: 'H', color: '#F9A61A' },
+    { name: 'Stukent Digital Marketing', date: 'Dec 2025', abbr: 'S', color: '#00A2E8' },
   ];
 
   return (
@@ -303,11 +303,15 @@ function EducationSection() {
             <div className="edu-cert-list">
               {certs.map(c => (
                 <div className="edu-cert-row" key={c.name}>
-                  <div className="edu-cert-icon">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="8" r="6"/>
-                      <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/>
-                    </svg>
+                  <div className="edu-cert-icon" style={{ borderColor: c.color + '55' }}>
+                    <span style={{
+                      color: c.color,
+                      fontWeight: 700,
+                      fontSize: c.abbr.length > 2 ? '7px' : c.abbr.length > 1 ? '9px' : '13px',
+                      fontFamily: 'DM Sans, sans-serif',
+                      letterSpacing: c.abbr.length > 2 ? '-0.5px' : 'normal',
+                      lineHeight: 1,
+                    }}>{c.abbr}</span>
                   </div>
                   <span className="edu-cert-name">{c.name}</span>
                   <span className="edu-cert-date">{c.date}</span>
